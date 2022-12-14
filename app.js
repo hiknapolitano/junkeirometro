@@ -43,16 +43,15 @@ function generateFactor() {
     console.log("rand: " + rand);
     console.log("factor: " + factor.toString());
     console.log("today is : " + today.toString());
-    document.querySelector("#factor").textContent = "Hoje, um minuto de Junkeira é equivalente a: " + factor.toFixed(2) + " minutos";
+    document.querySelector("#factor").textContent = "Hoje, um minuto de Junkeira é equivalente a: " + factor.toFixed(2) + " minutos, portanto...";
 }
 
 function inputHandler(e){
-    result.textContent = e.target.value + " minutos equivalem a " + (e.target.value * factor).toFixed(2) + " minutos"; 
+    result.textContent = "minutos junkeirosos equivalem a " + (e.target.value * factor).toFixed(2) + " minutos"; 
 }
 
 var result;
 var imgNum;
-
 window.onload = function() {
    generateFactor();
 
@@ -60,4 +59,6 @@ window.onload = function() {
    imgNum = Math.floor(Math.random() * (7 - 1) + 1);
    document.querySelector("#junksimage").src = "imgs/" + imgNum + ".png"
    result = document.querySelector("#conversion");
+   result.textContent = "minutos junkeirosos equivalem a " + (15 * factor).toFixed(2) + " minutos"; 
+
   };
