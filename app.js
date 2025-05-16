@@ -56,7 +56,7 @@ window.onload = function() {
    generateFactor();
 
    document.querySelector("#inputnumber").addEventListener("input", inputHandler);
-   imgNum = Math.floor(Math.random() * (7 - 1) + 1);
+   imgNum = Math.floor(Math.random() * (9 - 1) + 1);
    document.querySelector("#junksimage").src = "imgs/" + imgNum + ".png"
    result = document.querySelector("#conversion");
    result.textContent = "minutos junkeirosos equivalem a " + (15 * factor).toFixed(2) + " minutos"; 
